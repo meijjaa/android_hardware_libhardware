@@ -65,6 +65,14 @@ enum aml_screen_mode_e {
     AML_SCREEN_MODE_MAX
 };
 
+/**
+ * set_port_type() parameter description:
+ portType is consisted by 32-bit binary.
+ bit 28 : start tvin service flag, 1 : enable,  0 : disable.
+ bit 24 : vdin device num : 0 or 1, which means use vdin0 or vdin1.
+ bit 15~0 : tvin port type --TVIN_PORT_VIU,TVIN_PORT_HDMI0...
+                (port type define in tvin.h)
+ */
 typedef struct aml_screen_operations {
     int (*start)(struct aml_screen_device*);
     int (*stop)(struct aml_screen_device*);
@@ -83,13 +91,12 @@ typedef struct aml_screen_operations {
     int (*release_buffer)(struct aml_screen_device*, long*);
     // int (*inc_buffer_refcount)(struct aml_screen_device*, int*);
     int (*set_frame_rate)(struct aml_screen_device*, int);
-    int (*set_source_type)(struct aml_screen_device*, SOURCETYPE);
-    int (*get_source_type)(struct aml_screen_device*);
     int (*get_current_sourcesize)(struct aml_screen_device*, int *, int *);
     int (*set_screen_mode)(struct aml_screen_device*, int);
     int (*start_v4l2_device)(struct aml_screen_device*);
     int (*stop_v4l2_device)(struct aml_screen_device*);
-    int (*set_port_type)(struct aml_screen_device*, int);
+    int (*get_port_type)(struct aml_screen_device*);
+    int (*set_port_type)(struct aml_screen_device*, unsigned int);
 } aml_screen_operations_t;
 
 typedef struct aml_screen_device {
