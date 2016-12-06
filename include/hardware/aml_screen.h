@@ -97,6 +97,7 @@ typedef struct aml_screen_operations {
     int (*stop_v4l2_device)(struct aml_screen_device*);
     int (*get_port_type)(struct aml_screen_device*);
     int (*set_port_type)(struct aml_screen_device*, unsigned int);
+    int (*set_mode)(struct aml_screen_device*, int);
 } aml_screen_operations_t;
 
 typedef struct aml_screen_device {
