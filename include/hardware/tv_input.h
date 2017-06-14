@@ -397,6 +397,8 @@ typedef struct tv_input_device {
     int (*cancel_capture)(struct tv_input_device* dev, int device_id,
             int stream_id, uint32_t seq);
 
+    int (*set_capturesurface_size)(struct tv_input_device* dev, int width, int height);
+
     void* reserved[16];
 } tv_input_device_t;
 

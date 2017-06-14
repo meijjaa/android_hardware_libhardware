@@ -124,6 +124,8 @@ __BEGIN_DECLS
  * or no HW sync is available. */
 #define AUDIO_PARAMETER_HW_AV_SYNC "hw_av_sync"
 
+#define AUDIO_PARAMETER_HW_AV_EAC3_SYNC "HwAvSyncEAC3Supported"
+
 /**
  *  audio stream parameters
  */
@@ -171,6 +173,10 @@ __BEGIN_DECLS
 #define AUDIO_OFFLOAD_CODEC_DELAY_SAMPLES  "delay_samples"
 #define AUDIO_OFFLOAD_CODEC_PADDING_SAMPLES  "padding_samples"
 
+#define AUDIO_PARAMETER_STREAM_EQ "audioeffect_eq"
+#define AUDIO_PARAMETER_STREAM_SRS "audioeffect_srs_param"
+#define AUDIO_PARAMETER_STREAM_SRS_GAIN "audioeffect_srs_gain"
+#define AUDIO_PARAMETER_STREAM_SRS_SWITCH "audioeffect_srs_switch"
 /**************************************/
 
 /* common audio stream parameters and operations */
