@@ -156,11 +156,6 @@ enum {
     /* SEC Private usage , for Overlay path at HWC */
     GRALLOC_USAGE_HWC_HWOVERLAY         = 0x20000000,
 #endif
-    /* add by aml */
-    GRALLOC_USAGE_AML_VIDEO_OVERLAY     = 0x01000000,
-    GRALLOC_USAGE_AML_DMA_BUFFER        = 0x02000000,
-    GRALLOC_USAGE_AML_OMX_OVERLAY       = 0x04000000,
-    GRALLOC_USAGE_AML_SECURE            = 0x08000000,
 };
 
 /*****************************************************************************/
